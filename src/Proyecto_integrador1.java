@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class Proyecto_integrador1{
-	enum kind{obra_negra,obra_blanca};
-	enum Location{norte,centro,sur};
+	
 	public static final int BLACK_WORK=1300000;
 	public static final int WHITE_WORK= 2600000;
 	public static final int PAINTING= 980000;
@@ -42,16 +41,6 @@ public class Proyecto_integrador1{
 	
 	}
 	
-	
-	//ver la utilidad de enum para declarar el resto de metodos
-	/*public static int[] materials_list(int array[] ){
-	  
-	
-
-	
-	}*/ 
-
-
 
 
 
