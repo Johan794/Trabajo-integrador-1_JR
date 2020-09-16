@@ -22,8 +22,9 @@ public class Proyecto_integrador1{
 		 quantity_materials= new double[quantity];
 		 kind= new Work[quantity];
 		//in the next cycle the user will type the amount and kind of the materials
-		sc.nextLine();
+		
 		for(int i=0; i<materials_list.length; i++){
+			sc.nextLine();
 			System.out.println("Please type the material # "+(i+1) );
 			    materials_list[i]= sc.nextLine();
 		
