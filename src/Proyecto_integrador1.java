@@ -14,6 +14,9 @@ public class Proyecto_integrador1{
 		int home_center[];
 		int downtown_store[];
 		int neighborhood_store[];
+		Object black_work[];
+		Object white_work[];
+		Object painting[];
 		
 		System.out.println("Please type the amount of materials needed in the construction");
          quantity= sc.nextInt();		
@@ -169,8 +172,10 @@ public class Proyecto_integrador1{
 	
 	public static void bestplace_tobuy(int []home_center, int []downtown_store, int []neighborhood_store, int quantity, String array[]){
 		int the_best_buy;
+		int final_bestbudget=0;
 		String buy="";
 		String best_election[]= new String[quantity];
+		int best_budget[]= new int[quantity];
 		for(int i=0; i<best_election.length; i++){
 			the_best_buy=home_center[i];
 			if((the_best_buy>=downtown_store[i])&&(the_best_buy>=neighborhood_store[i])){
@@ -182,20 +187,24 @@ public class Proyecto_integrador1{
 				      }
 			
 			}else if(the_best_buy>=downtown_store[i]){
+	                   the_best_buy=neighborhood_store[i];			
 				       buy="Down town Store";
 			          
 			  }else if(the_best_buy>=neighborhood_store[i]){
+                       the_best_buy=neighborhood_store[i];			
 			           buy="Neighborhood Store";
 			                 }else{ buy="Home Center";
+								    the_best_buy=home_center[i];
 			                          }
 		      best_election[i]=buy;
+			  best_budget[i]=the_best_buy;
 		}
 	 for(int j=0; j<best_election.length; j++){
 		 System.out.println("The best place to buy "+array[j]+" is "+best_election[j]);
-	 
-	 
+		 final_bestbudget+= best_budget[j];
+		 
 	 }
-	 	
+         System.out.println("In that case the price of the construction would be "+final_bestbudget);	 	
 	
 	}
 	
